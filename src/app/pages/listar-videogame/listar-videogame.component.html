@@ -1,0 +1,46 @@
+<div class="container">
+    <br />
+    <h2>Catálogo</h2>
+    <br />
+
+    <p *ngIf="videogames.length <= 0" class="text-center">
+        No existen registros 
+    </p>
+
+    <table *ngIf="videogames.length > 0" class="table table-bordered">
+        <thead class="table-success">
+            <tr>
+                <th scope="col">ID Empleado</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Departamento</th>
+                <th scope="col">E-Mail</th>
+                <th scope="col">Teléfono</th>
+                <th scope="col">Editar</th>
+                <th scope="col">Eliminar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let videogame of videogames; let i = index">
+                <td>{{ videogame._id }}</td>
+                <td>{{ videogame.nombre }}</td>
+                <td>{{ videogame.genero }}</td>
+                <td>{{ videogame.costo }}</td>
+                <td>{{ videogame.autor }}</td>
+                <td>{{ videogame.comentario }}</td>
+                <td>
+                    <span [routerLink]="['/editar-videogame', videogame._id]">
+                        <button type="button"
+                            class="btn btn-warning btn-sm">Editar</button>
+                    </span>
+                </td>
+                <td>
+                    <span (click)="eliminarVideogame(videogame,i)">
+                        <button type="button"
+                            class="btn btn-danger btn-sm">Eliminar</button>
+                    </span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
