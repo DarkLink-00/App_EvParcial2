@@ -8,7 +8,7 @@ const routes: Routes = [
   {path: '', pathMatch: 'full', redirectTo: 'agregar-videogame'},
   {path: 'agregar-videogame', component: AgregarVideogameComponent},
   {path: 'listar-videogame', component: ListarVideogameComponent},
-  {path: 'editar-videogame', component: EditarVideogameComponent},
+  {path: 'editar-videogame/:id', component: EditarVideogameComponent},
 ];
 
 @NgModule({

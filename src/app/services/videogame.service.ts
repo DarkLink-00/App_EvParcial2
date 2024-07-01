@@ -8,7 +8,7 @@ import { Observable, catchError, map, throwError } from 'rxjs';
 export class VideogameService {
 
   //Propiedades
-  baseUri: string = 'https://localhost:40000/api';
+  baseUri: string = 'https://backend-evparcial2.onrender.com/api';
   headers = new HttpHeaders()
     .set('Content-Type','application/json');
 

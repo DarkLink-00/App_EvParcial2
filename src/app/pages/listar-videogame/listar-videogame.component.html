@@ -13,6 +13,7 @@
                 <th scope="col">ID Empleado</th>
                 <th scope="col">Nombre</th>
                 <th scope="col">Departamento</th>
+                <th scope="col">Costo</th>
                 <th scope="col">E-Mail</th>
                 <th scope="col">Teléfono</th>
                 <th scope="col">Editar</th>
@@ -24,7 +25,7 @@
                 <td>{{ videogame._id }}</td>
                 <td>{{ videogame.nombre }}</td>
                 <td>{{ videogame.genero }}</td>
-                <td>{{ videogame.costo }}</td>
+                <td>${{ videogame.costo }}</td>
                 <td>{{ videogame.autor }}</td>
                 <td>{{ videogame.comentario }}</td>
                 <td>
